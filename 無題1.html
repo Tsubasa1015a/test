@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+HTML文書のヘッダ部分
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ウェブページのタイトル</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<p id="msg">wait…</p>
+<p onclick="action(event)">click me!</p>
+<p><script>
+    var counter=0;
+    function action(event){
+        counter++;
+        var dom=event.target;
+        dom.textContent='Count:'+counter;
+    }
+     var p=document.querySelector('#msg');
+    setTimeout(function(){
+        p.textContent="テッテレー！";
+    },10000);
+
+    function calc(N){
+        var total =0;
+        for(var i=1;i<N;i++){
+            total +=i;
+        }
+        return total;
+    }
+    var num =100;
+    document.write(num + "までの合計は" +calc(num)+"<br>");
+
+    var total =0;
+    var arr ={'国語':30,'算数':32,'科学':100};
+    for(key in arr){
+        total += arr[key]
+        document.write(key + "の得点は" +arr[key] +"<br>")
+    };
+    document.write("合計得点は" +total +",平均点は" + total/3 +'<br>');
+
+    var keisan ={};
+    keisan.data=[0];
+    keisan.calc=function(){
+        var total =0;
+        for(var m in this.data){
+            total += this.data[m]
+        }
+        return total;
+    };
+
+    keisan.report=function(){
+        document.write("DATA:" +keisan.data +'<br>' );
+        document.write("Total:" +keisan.calc() );
+    };
+    keisan.data=[123,34,78,1234];
+    keisan.report();
+
+    class Keisan{
+        constructor(data){
+            this.data=data;
+        }
+        calc(){
+        var total =0;
+        for(var m in this.data){
+            total += this.data[m]
+        }
+        return total;
+        }
+
+        report(){
+        document.write('<div class="alert alert-danger">');
+        document.write('Data:' +this.data +'<br>' );
+        document.write('Total:' +this.calc() );
+        document.write('</div>');
+        }
+    }
+    var array =[10,20,30,40];
+    var a =new Keisan(array);
+    a.report();
+
+    var array2 =[10,20,30,40,90];
+    var b =new Keisan(array2);
+    b.report();
+    
+   
+</script></p>
+HTML文書のボディ部分
+　
+
+<h1>ウェブページの見出し</h1>
+<p>ウェブページを作成しました！</p>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>
