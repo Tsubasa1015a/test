@@ -1,3 +1,7 @@
-jviorhjbpab@ea
-吉田
-ぺぺぺぺぺぺぺぺぺぺっぺ
+public class uiui{
+    
+public static void main(String[] args){
+    System.out.println("99");
+};
+};
+
