@@ -4,7 +4,7 @@ def AND(x1,x2):
     if tmp <= theta:
         print(0) 
     elif tmp > theta:
-        print(1) 
+        print(123890) 
 
 AND(0,0)
 AND(0,1)
