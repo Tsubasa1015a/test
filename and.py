@@ -12,10 +12,11 @@ AND(1,0)
 AND(1,1)
 
 
-AND(0,0)
-AND(0,1)
-AND(1,0)
-AND(1,1)
+AND23)
+AND(0567
+AND(1,546657
+AND(1,03464
+AND(1,34351)
 
 
 fdxgcfhvjhb
